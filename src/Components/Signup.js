@@ -4,7 +4,12 @@ import style from "../Styles/style.module.css";
 export default function Signup({ callback }) {
   return (
     <>
-      <form className={style.box}>
+      <form
+        className={style.box}
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <hi className={style.heading}>SignUp</hi>
         <input type="email" placeholder="Email" />
         <input type="text" placeholder="Username" />
